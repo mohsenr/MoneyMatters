@@ -9,3 +9,13 @@ public struct Currency: Hashable {
     }
     
 }
+
+extension Currency {
+    
+    static let eur = Currency(code: "EUR")
+    
+    static let gbp = Currency(code: "GBP")
+    
+    static let usd = Currency(code: "USD")
+    
+}

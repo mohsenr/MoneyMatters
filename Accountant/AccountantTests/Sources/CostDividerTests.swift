@@ -3,7 +3,7 @@ import Accountant
 
 class CostDividerTests: XCTestCase {
     
-    let divider = CostDivider<Int>()
+    let divider = CostDivider<Int>(significantFractionDigits: 2)
     
     func testThatBalancesAreEmptyWithoutAnyExpenses() {
         let balances = divider.balances(of: [])
@@ -37,6 +37,13 @@ class CostDividerTests: XCTestCase {
             2: -1.0,
             ]
         XCTAssertEqual(actual, expected)
+    }
+    
+    func testThatTotalOfSignificantDigitsOfBalanceAreZero() {
+        let expenditure = CostDivider.Expenditure(amount: 2.00, payer: 1, beneficiaries: [1,2,3])
+        
+        let sumOfBalances = divider.balances(of: [expenditure]).values.map { Int($0*100) }.reduce(0, +)
+        XCTAssertEqual(0, sumOfBalances)
     }
     
 }

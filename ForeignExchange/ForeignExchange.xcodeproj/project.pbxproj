@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		897937572083D1090065AC82 /* ForeignExchange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8979374D2083D1090065AC82 /* ForeignExchange.framework */; };
 		8979375C2083D1090065AC82 /* ForeignExchangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8979375B2083D1090065AC82 /* ForeignExchangeTests.swift */; };
-		897937682083D12F0065AC82 /* ForeignExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897937672083D12F0065AC82 /* ForeignExchange.swift */; };
+		897937682083D12F0065AC82 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897937672083D12F0065AC82 /* Currency.swift */; };
+		8979377E2083D3230065AC82 /* CurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8979377D2083D3230065AC82 /* CurrencyTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +29,7 @@
 		897937562083D1090065AC82 /* ForeignExchangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForeignExchangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8979375B2083D1090065AC82 /* ForeignExchangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeignExchangeTests.swift; sourceTree = "<group>"; };
 		8979375D2083D1090065AC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		897937672083D12F0065AC82 /* ForeignExchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeignExchange.swift; sourceTree = "<group>"; };
+		897937672083D12F0065AC82 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		897937702083D1620065AC82 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		897937712083D1620065AC82 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		897937732083D1620065AC82 /* OSX.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = OSX.xcconfig; sourceTree = "<group>"; };
@@ -40,6 +41,7 @@
 		8979377A2083D1620065AC82 /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
 		8979377B2083D1780065AC82 /* ForeignExchange.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ForeignExchange.xcconfig; sourceTree = "<group>"; };
 		8979377C2083D1800065AC82 /* ForeignExchangeTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ForeignExchangeTests.xcconfig; sourceTree = "<group>"; };
+		8979377D2083D3230065AC82 /* CurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				8979375B2083D1090065AC82 /* ForeignExchangeTests.swift */,
+				8979377D2083D3230065AC82 /* CurrencyTests.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -127,7 +130,7 @@
 		8979376C2083D1530065AC82 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				897937672083D12F0065AC82 /* ForeignExchange.swift */,
+				897937672083D12F0065AC82 /* Currency.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -289,7 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				897937682083D12F0065AC82 /* ForeignExchange.swift in Sources */,
+				897937682083D12F0065AC82 /* Currency.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8979377E2083D3230065AC82 /* CurrencyTests.swift in Sources */,
 				8979375C2083D1090065AC82 /* ForeignExchangeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

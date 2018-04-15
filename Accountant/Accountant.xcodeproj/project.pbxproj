@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		897055FD2074A55D0068C24D /* AccountantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897055FC2074A55D0068C24D /* AccountantTests.swift */; };
-		898A3A612074A3C3004AB47F /* Accountant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898A3A602074A3C3004AB47F /* Accountant.swift */; };
+		898A3A612074A3C3004AB47F /* CostDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898A3A602074A3C3004AB47F /* CostDivider.swift */; };
 		8999C9092074A22300D211DE /* Accountant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8999C8FF2074A22300D211DE /* Accountant.framework */; };
+		899FB24A20835218009EC399 /* CostDividerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FB24920835218009EC399 /* CostDividerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +25,7 @@
 
 /* Begin PBXFileReference section */
 		897055FC2074A55D0068C24D /* AccountantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountantTests.swift; sourceTree = "<group>"; };
-		898A3A602074A3C3004AB47F /* Accountant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accountant.swift; sourceTree = "<group>"; };
+		898A3A602074A3C3004AB47F /* CostDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostDivider.swift; sourceTree = "<group>"; };
 		8999C8FF2074A22300D211DE /* Accountant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Accountant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8999C9032074A22300D211DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8999C9082074A22300D211DE /* AccountantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccountantTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +41,7 @@
 		899FB2422079490F009EC399 /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
 		899FB24420834570009EC399 /* Accountant.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Accountant.xcconfig; sourceTree = "<group>"; };
 		899FB24620834B33009EC399 /* AccountantTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AccountantTests.xcconfig; sourceTree = "<group>"; };
+		899FB24920835218009EC399 /* CostDividerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostDividerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				897055FC2074A55D0068C24D /* AccountantTests.swift */,
+				899FB24920835218009EC399 /* CostDividerTests.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -109,7 +112,7 @@
 		8999C9192074A24500D211DE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				898A3A602074A3C3004AB47F /* Accountant.swift */,
+				898A3A602074A3C3004AB47F /* CostDivider.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -289,7 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				898A3A612074A3C3004AB47F /* Accountant.swift in Sources */,
+				898A3A612074A3C3004AB47F /* CostDivider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				899FB24A20835218009EC399 /* CostDividerTests.swift in Sources */,
 				897055FD2074A55D0068C24D /* AccountantTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

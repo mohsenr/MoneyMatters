@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		897937572083D1090065AC82 /* ForeignExchange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8979374D2083D1090065AC82 /* ForeignExchange.framework */; };
+		8979375C2083D1090065AC82 /* ForeignExchangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8979375B2083D1090065AC82 /* ForeignExchangeTests.swift */; };
+		897937682083D12F0065AC82 /* ForeignExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897937672083D12F0065AC82 /* ForeignExchange.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		897937582083D1090065AC82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 897937442083D1090065AC82 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8979374C2083D1090065AC82;
+			remoteInfo = ForeignExchange;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8979374D2083D1090065AC82 /* ForeignExchange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ForeignExchange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		897937512083D1090065AC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		897937562083D1090065AC82 /* ForeignExchangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForeignExchangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8979375B2083D1090065AC82 /* ForeignExchangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeignExchangeTests.swift; sourceTree = "<group>"; };
+		8979375D2083D1090065AC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		897937672083D12F0065AC82 /* ForeignExchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeignExchange.swift; sourceTree = "<group>"; };
+		897937702083D1620065AC82 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		897937712083D1620065AC82 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		897937732083D1620065AC82 /* OSX.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = OSX.xcconfig; sourceTree = "<group>"; };
+		897937742083D1620065AC82 /* iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = iOS.xcconfig; sourceTree = "<group>"; };
+		897937762083D1620065AC82 /* App.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = App.xcconfig; sourceTree = "<group>"; };
+		897937772083D1620065AC82 /* Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Framework.xcconfig; sourceTree = "<group>"; };
+		897937782083D1620065AC82 /* UITest.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UITest.xcconfig; sourceTree = "<group>"; };
+		897937792083D1620065AC82 /* Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Test.xcconfig; sourceTree = "<group>"; };
+		8979377A2083D1620065AC82 /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		8979377B2083D1780065AC82 /* ForeignExchange.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ForeignExchange.xcconfig; sourceTree = "<group>"; };
+		8979377C2083D1800065AC82 /* ForeignExchangeTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ForeignExchangeTests.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		897937492083D1090065AC82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		897937532083D1090065AC82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				897937572083D1090065AC82 /* ForeignExchange.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		897937432083D1090065AC82 = {
+			isa = PBXGroup;
+			children = (
+				8979374F2083D1090065AC82 /* ForeignExchange */,
+				8979375A2083D1090065AC82 /* ForeignExchangeTests */,
+				8979376D2083D1620065AC82 /* Shared */,
+				8979374E2083D1090065AC82 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8979374E2083D1090065AC82 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8979374D2083D1090065AC82 /* ForeignExchange.framework */,
+				897937562083D1090065AC82 /* ForeignExchangeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8979374F2083D1090065AC82 /* ForeignExchange */ = {
+			isa = PBXGroup;
+			children = (
+				8979376C2083D1530065AC82 /* Sources */,
+				897937692083D13E0065AC82 /* Configurations */,
+			);
+			path = ForeignExchange;
+			sourceTree = "<group>";
+		};
+		8979375A2083D1090065AC82 /* ForeignExchangeTests */ = {
+			isa = PBXGroup;
+			children = (
+				8979376B2083D14F0065AC82 /* Sources */,
+				8979376A2083D1450065AC82 /* Configurations */,
+			);
+			path = ForeignExchangeTests;
+			sourceTree = "<group>";
+		};
+		897937692083D13E0065AC82 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				897937512083D1090065AC82 /* Info.plist */,
+				8979377B2083D1780065AC82 /* ForeignExchange.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		8979376A2083D1450065AC82 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				8979375D2083D1090065AC82 /* Info.plist */,
+				8979377C2083D1800065AC82 /* ForeignExchangeTests.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		8979376B2083D14F0065AC82 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8979375B2083D1090065AC82 /* ForeignExchangeTests.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		8979376C2083D1530065AC82 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				897937672083D12F0065AC82 /* ForeignExchange.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		8979376D2083D1620065AC82 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				8979376E2083D1620065AC82 /* Configurations */,
+			);
+			name = Shared;
+			path = ../Shared;
+			sourceTree = "<group>";
+		};
+		8979376E2083D1620065AC82 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				8979376F2083D1620065AC82 /* Configurations */,
+				897937722083D1620065AC82 /* Platforms */,
+				897937752083D1620065AC82 /* Targets */,
+				8979377A2083D1620065AC82 /* Project.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		8979376F2083D1620065AC82 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				897937702083D1620065AC82 /* Debug.xcconfig */,
+				897937712083D1620065AC82 /* Release.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		897937722083D1620065AC82 /* Platforms */ = {
+			isa = PBXGroup;
+			children = (
+				897937732083D1620065AC82 /* OSX.xcconfig */,
+				897937742083D1620065AC82 /* iOS.xcconfig */,
+			);
+			path = Platforms;
+			sourceTree = "<group>";
+		};
+		897937752083D1620065AC82 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				897937762083D1620065AC82 /* App.xcconfig */,
+				897937772083D1620065AC82 /* Framework.xcconfig */,
+				897937782083D1620065AC82 /* UITest.xcconfig */,
+				897937792083D1620065AC82 /* Test.xcconfig */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8979374A2083D1090065AC82 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8979374C2083D1090065AC82 /* ForeignExchange */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 897937612083D1090065AC82 /* Build configuration list for PBXNativeTarget "ForeignExchange" */;
+			buildPhases = (
+				897937482083D1090065AC82 /* Sources */,
+				897937492083D1090065AC82 /* Frameworks */,
+				8979374A2083D1090065AC82 /* Headers */,
+				8979374B2083D1090065AC82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForeignExchange;
+			productName = ForeignExchange;
+			productReference = 8979374D2083D1090065AC82 /* ForeignExchange.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		897937552083D1090065AC82 /* ForeignExchangeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 897937642083D1090065AC82 /* Build configuration list for PBXNativeTarget "ForeignExchangeTests" */;
+			buildPhases = (
+				897937522083D1090065AC82 /* Sources */,
+				897937532083D1090065AC82 /* Frameworks */,
+				897937542083D1090065AC82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				897937592083D1090065AC82 /* PBXTargetDependency */,
+			);
+			name = ForeignExchangeTests;
+			productName = ForeignExchangeTests;
+			productReference = 897937562083D1090065AC82 /* ForeignExchangeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		897937442083D1090065AC82 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Mohsen Ramezanpoor";
+				TargetAttributes = {
+					8979374C2083D1090065AC82 = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+					};
+					897937552083D1090065AC82 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 897937472083D1090065AC82 /* Build configuration list for PBXProject "ForeignExchange" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 897937432083D1090065AC82;
+			productRefGroup = 8979374E2083D1090065AC82 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8979374C2083D1090065AC82 /* ForeignExchange */,
+				897937552083D1090065AC82 /* ForeignExchangeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8979374B2083D1090065AC82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		897937542083D1090065AC82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		897937482083D1090065AC82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				897937682083D12F0065AC82 /* ForeignExchange.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		897937522083D1090065AC82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8979375C2083D1090065AC82 /* ForeignExchangeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		897937592083D1090065AC82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8979374C2083D1090065AC82 /* ForeignExchange */;
+			targetProxy = 897937582083D1090065AC82 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8979375F2083D1090065AC82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 897937702083D1620065AC82 /* Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		897937602083D1090065AC82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 897937712083D1620065AC82 /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		897937622083D1090065AC82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8979377B2083D1780065AC82 /* ForeignExchange.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		897937632083D1090065AC82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8979377B2083D1780065AC82 /* ForeignExchange.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		897937652083D1090065AC82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8979377C2083D1800065AC82 /* ForeignExchangeTests.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		897937662083D1090065AC82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8979377C2083D1800065AC82 /* ForeignExchangeTests.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		897937472083D1090065AC82 /* Build configuration list for PBXProject "ForeignExchange" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8979375F2083D1090065AC82 /* Debug */,
+				897937602083D1090065AC82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		897937612083D1090065AC82 /* Build configuration list for PBXNativeTarget "ForeignExchange" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				897937622083D1090065AC82 /* Debug */,
+				897937632083D1090065AC82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		897937642083D1090065AC82 /* Build configuration list for PBXNativeTarget "ForeignExchangeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				897937652083D1090065AC82 /* Debug */,
+				897937662083D1090065AC82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 897937442083D1090065AC82 /* Project object */;
+}

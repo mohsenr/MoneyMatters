@@ -4,4 +4,7 @@
    <FileRef
       location = "group:Accountant/Accountant.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:ForeignExchange/ForeignExchange.xcodeproj">
+   </FileRef>
 </Workspace>

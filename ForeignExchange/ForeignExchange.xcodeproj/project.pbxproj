@@ -11,6 +11,7 @@
 		8979375C2083D1090065AC82 /* ForeignExchangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8979375B2083D1090065AC82 /* ForeignExchangeTests.swift */; };
 		897937682083D12F0065AC82 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897937672083D12F0065AC82 /* Currency.swift */; };
 		8979377E2083D3230065AC82 /* CurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8979377D2083D3230065AC82 /* CurrencyTests.swift */; };
+		89BD7D5C2084DA4A007D38C8 /* SupportedCurrencies.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BD7D5B2084DA4A007D38C8 /* SupportedCurrencies.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89784BF92083D64D0082BAB3 /* CurrencyListProcessor.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CurrencyListProcessor.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8979374D2083D1090065AC82 /* ForeignExchange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ForeignExchange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		897937512083D1090065AC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		897937562083D1090065AC82 /* ForeignExchangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForeignExchangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +44,7 @@
 		8979377B2083D1780065AC82 /* ForeignExchange.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ForeignExchange.xcconfig; sourceTree = "<group>"; };
 		8979377C2083D1800065AC82 /* ForeignExchangeTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ForeignExchangeTests.xcconfig; sourceTree = "<group>"; };
 		8979377D2083D3230065AC82 /* CurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTests.swift; sourceTree = "<group>"; };
+		89BD7D5B2084DA4A007D38C8 /* SupportedCurrencies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SupportedCurrencies.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,7 @@
 			children = (
 				8979374F2083D1090065AC82 /* ForeignExchange */,
 				8979375A2083D1090065AC82 /* ForeignExchangeTests */,
+				8998360D2083D605009C647E /* Tools */,
 				8979376D2083D1620065AC82 /* Shared */,
 				8979374E2083D1090065AC82 /* Products */,
 			);
@@ -86,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				8979376C2083D1530065AC82 /* Sources */,
+				89BD7D582084D9B6007D38C8 /* Resources */,
 				897937692083D13E0065AC82 /* Configurations */,
 			);
 			path = ForeignExchange;
@@ -184,6 +189,22 @@
 			path = Targets;
 			sourceTree = "<group>";
 		};
+		8998360D2083D605009C647E /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				89784BF92083D64D0082BAB3 /* CurrencyListProcessor.playground */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		89BD7D582084D9B6007D38C8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				89BD7D5B2084DA4A007D38C8 /* SupportedCurrencies.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -275,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89BD7D5C2084DA4A007D38C8 /* SupportedCurrencies.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

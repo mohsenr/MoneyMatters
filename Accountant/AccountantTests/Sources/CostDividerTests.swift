@@ -10,6 +10,12 @@ class CostDividerTests: XCTestCase {
         XCTAssertTrue(balances.isEmpty)
     }
     
+    func testCreatingExpenditureWithoutBeneficiaryTraps() {
+        XCTAssertFatalError {
+            _ = CostDivider.Expenditure(amount: 1, payer: 1, beneficiaries: [])
+        }
+    }
+    
     func testThatASingleEntityExpenditureDoesNotProduceABalance() {
         let expenditure = CostDivider.Expenditure(amount: 2, payer: 1, beneficiaries: [1])
         

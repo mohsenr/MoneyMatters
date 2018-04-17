@@ -1,4 +1,5 @@
 import Foundation
+import Support
 
 public struct CostDivider<Entity: Hashable> {
     
@@ -8,7 +9,7 @@ public struct CostDivider<Entity: Hashable> {
         var beneficiaries: Set<Entity>
         
         public init(amount: Double, payer: Entity, beneficiaries: Set<Entity>) {
-            AppSupervisor.precondition(!beneficiaries.isEmpty, "Expenditure must have at least one beneficiary.")
+            Thread.precondition(!beneficiaries.isEmpty, "Expenditure must have at least one beneficiary.")
             self.amount = amount
             self.payer = payer
             self.beneficiaries = beneficiaries

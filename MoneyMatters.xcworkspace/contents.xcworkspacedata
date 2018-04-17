@@ -7,4 +7,11 @@
    <FileRef
       location = "group:ForeignExchange/ForeignExchange.xcodeproj">
    </FileRef>
+   <Group
+      location = "container:"
+      name = "Dependencies">
+      <FileRef
+         location = "group:Carthage/Checkouts/Support/Support/Support.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>

@@ -1,4 +1,5 @@
 import XCTest
+import TestingSupport
 import Accountant
 
 class CostDividerTests: XCTestCase {

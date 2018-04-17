@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		894297B32084E6A80023B97B /* AppSupervisor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894297B22084E6A80023B97B /* AppSupervisor.swift */; };
-		895B72C12084F22E006B9082 /* FatalErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895B72C02084F22E006B9082 /* FatalErrors.swift */; };
+		8944602E2085EC1F0049667E /* Support.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8944602D2085EC1F0049667E /* Support.framework */; };
+		894460302085EC1F0049667E /* TestingSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8944602F2085EC1F0049667E /* TestingSupport.framework */; };
+		894460312085EC5D0049667E /* Support.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8944602D2085EC1F0049667E /* Support.framework */; };
 		897055FD2074A55D0068C24D /* AccountantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897055FC2074A55D0068C24D /* AccountantTests.swift */; };
 		898A3A612074A3C3004AB47F /* CostDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898A3A602074A3C3004AB47F /* CostDivider.swift */; };
 		8999C9092074A22300D211DE /* Accountant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8999C8FF2074A22300D211DE /* Accountant.framework */; };
@@ -26,8 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		894297B22084E6A80023B97B /* AppSupervisor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSupervisor.swift; sourceTree = "<group>"; };
-		895B72C02084F22E006B9082 /* FatalErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatalErrors.swift; sourceTree = "<group>"; };
+		8944602D2085EC1F0049667E /* Support.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Support.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8944602F2085EC1F0049667E /* TestingSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TestingSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		897055FC2074A55D0068C24D /* AccountantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountantTests.swift; sourceTree = "<group>"; };
 		898A3A602074A3C3004AB47F /* CostDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostDivider.swift; sourceTree = "<group>"; };
 		8999C8FF2074A22300D211DE /* Accountant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Accountant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				894460312085EC5D0049667E /* Support.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8944602E2085EC1F0049667E /* Support.framework in Frameworks */,
+				894460302085EC1F0049667E /* TestingSupport.framework in Frameworks */,
 				8999C9092074A22300D211DE /* Accountant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,12 +71,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		895B72BF2084F214006B9082 /* Support */ = {
+		8944602A2085EC0E0049667E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				895B72C02084F22E006B9082 /* FatalErrors.swift */,
+				8944602D2085EC1F0049667E /* Support.framework */,
+				8944602F2085EC1F0049667E /* TestingSupport.framework */,
 			);
-			path = Support;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		897055FE2074A56B0068C24D /* Sources */ = {
@@ -91,6 +96,7 @@
 				8999C90C2074A22300D211DE /* AccountantTests */,
 				899FB2352079490F009EC399 /* Shared */,
 				8999C9002074A22300D211DE /* Products */,
+				8944602A2085EC0E0049667E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,7 +121,6 @@
 		8999C90C2074A22300D211DE /* AccountantTests */ = {
 			isa = PBXGroup;
 			children = (
-				895B72BF2084F214006B9082 /* Support */,
 				897055FE2074A56B0068C24D /* Sources */,
 				899FB24520834B0E009EC399 /* Configurations */,
 			);
@@ -125,7 +130,6 @@
 		8999C9192074A24500D211DE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				894297B22084E6A80023B97B /* AppSupervisor.swift */,
 				898A3A602074A3C3004AB47F /* CostDivider.swift */,
 			);
 			path = Sources;
@@ -307,7 +311,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				898A3A612074A3C3004AB47F /* CostDivider.swift in Sources */,
-				894297B32084E6A80023B97B /* AppSupervisor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +320,6 @@
 			files = (
 				899FB24A20835218009EC399 /* CostDividerTests.swift in Sources */,
 				897055FD2074A55D0068C24D /* AccountantTests.swift in Sources */,
-				895B72C12084F22E006B9082 /* FatalErrors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

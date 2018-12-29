@@ -2,30 +2,37 @@ import XCTest
 import TestingSupport
 import Accountant
 
+private struct MockExpenditure: Expenditure {
+    var amount: Double
+    var payer: Int
+    var beneficiaries: Set<Int>
+}
+
 class CostDividerTests: XCTestCase {
     
-    let divider = CostDivider<Int>(significantFractionDigits: 2)
+    let divider = CostDivider(significantFractionDigits: 2)
     
     func testThatBalancesAreEmptyWithoutAnyExpenses() {
-        let balances = divider.balances(of: [])
+        let balances = divider.balances(of: Array<MockExpenditure>())
         XCTAssertTrue(balances.isEmpty)
     }
     
-    func testCreatingExpenditureWithoutBeneficiaryTraps() {
+    func testUsingExpenditureWithoutBeneficiaryTraps() {
         XCTAssertFatalError {
-            _ = CostDivider.Expenditure(amount: 1, payer: 1, beneficiaries: [])
+            let expenditure = MockExpenditure(amount: 1, payer: 1, beneficiaries: [])
+            _ = self.divider.balances(of: [expenditure])
         }
     }
     
     func testThatASingleEntityExpenditureDoesNotProduceABalance() {
-        let expenditure = CostDivider.Expenditure(amount: 2, payer: 1, beneficiaries: [1])
+        let expenditure = MockExpenditure(amount: 2, payer: 1, beneficiaries: [1])
         
         let balances = divider.balances(of: [expenditure])
         XCTAssertTrue(balances.isEmpty)
     }
     
     func testThatPayingForAnotherEntityIsCapturedInTheBalance() {
-        let expenditure = CostDivider.Expenditure(amount: 2, payer: 1, beneficiaries: [2])
+        let expenditure = MockExpenditure(amount: 2, payer: 1, beneficiaries: [2])
         
         let actual = divider.balances(of: [expenditure])
         let expected = [
@@ -36,7 +43,7 @@ class CostDividerTests: XCTestCase {
     }
     
     func testThatPayingForSelfAndAnotherEntityIsCapturedInTheBalance() {
-        let expenditure = CostDivider.Expenditure(amount: 2, payer: 1, beneficiaries: [1,2])
+        let expenditure = MockExpenditure(amount: 2, payer: 1, beneficiaries: [1,2])
         
         let actual = divider.balances(of: [expenditure])
         let expected = [
@@ -47,7 +54,7 @@ class CostDividerTests: XCTestCase {
     }
     
     func testThatTotalOfSignificantDigitsOfBalanceAreZero() {
-        let expenditure = CostDivider.Expenditure(amount: 2.00, payer: 1, beneficiaries: [1,2,3])
+        let expenditure = MockExpenditure(amount: 2.00, payer: 1, beneficiaries: [1,2,3])
         
         let sumOfBalances = divider.balances(of: [expenditure]).values.map { Int($0*100) }.reduce(0, +)
         XCTAssertEqual(0, sumOfBalances)

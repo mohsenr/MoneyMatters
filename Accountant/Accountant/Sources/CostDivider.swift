@@ -1,20 +1,15 @@
 import Foundation
 import Support
 
-public struct CostDivider<Entity: Hashable> {
+public protocol Expenditure {
+    associatedtype Entity: Hashable
     
-    public struct Expenditure {
-        var amount: Double
-        var payer: Entity
-        var beneficiaries: Set<Entity>
-        
-        public init(amount: Double, payer: Entity, beneficiaries: Set<Entity>) {
-            Thread.precondition(!beneficiaries.isEmpty, "Expenditure must have at least one beneficiary.")
-            self.amount = amount
-            self.payer = payer
-            self.beneficiaries = beneficiaries
-        }
-    }
+    var amount: Double { get }
+    var payer: Entity { get }
+    var beneficiaries: Set<Entity> { get }
+}
+
+public struct CostDivider {
     
     private var rounder: Rounder
     
@@ -22,8 +17,12 @@ public struct CostDivider<Entity: Hashable> {
         self.rounder = Rounder(fractionDigitsToKeep: significantFractionDigits)
     }
     
-    public func balances(of expenditures: [Expenditure]) -> [Entity: Double] {
-        let costLines = expenditures.lazy.flatMap { expenditure -> [(Entity, Double)] in
+    public func balances<E>(of expenditures: [E]) -> [E.Entity: Double] where E: Expenditure {
+        guard expenditures.allSatisfy({ !$0.beneficiaries.isEmpty }) else {
+            Thread.fatalError("All expenditures must have at least one beneficiary.")
+        }
+        
+        let costLines = expenditures.lazy.flatMap { expenditure -> [(E.Entity, Double)] in
             let payerLines = [(expenditure.payer, expenditure.amount)]
             let individualAmount = -(expenditure.amount / Double(expenditure.beneficiaries.count))
             let beneficiaryLines = expenditure.beneficiaries.map {

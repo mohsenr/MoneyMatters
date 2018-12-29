@@ -1,14 +1,6 @@
 import Foundation
 import Support
 
-public protocol Expenditure {
-    associatedtype Entity: Hashable
-    
-    var amount: Double { get }
-    var payer: Entity { get }
-    var beneficiaries: Set<Entity> { get }
-}
-
 public struct CostDivider {
     
     private var rounder: Rounder

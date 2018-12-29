@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		892A372621D7D6EF00F32259 /* Expenditure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A372521D7D6EF00F32259 /* Expenditure.swift */; };
 		8944602E2085EC1F0049667E /* Support.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8944602D2085EC1F0049667E /* Support.framework */; };
 		894460302085EC1F0049667E /* TestingSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8944602F2085EC1F0049667E /* TestingSupport.framework */; };
 		894460312085EC5D0049667E /* Support.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8944602D2085EC1F0049667E /* Support.framework */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		892A372521D7D6EF00F32259 /* Expenditure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenditure.swift; sourceTree = "<group>"; };
 		8944602D2085EC1F0049667E /* Support.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Support.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8944602F2085EC1F0049667E /* TestingSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TestingSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		897055FC2074A55D0068C24D /* AccountantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountantTests.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		8999C9192074A24500D211DE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				892A372521D7D6EF00F32259 /* Expenditure.swift */,
 				898A3A602074A3C3004AB47F /* CostDivider.swift */,
 			);
 			path = Sources;
@@ -311,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				898A3A612074A3C3004AB47F /* CostDivider.swift in Sources */,
+				892A372621D7D6EF00F32259 /* Expenditure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,9 +8,17 @@ private struct MockExpenditure: Expenditure {
     var beneficiaries: Set<Int>
 }
 
+private struct MockTransfer: Transfer, Equatable {
+    var from: Int
+    var to: Int
+    var amount: Double
+}
+
 class CostDividerTests: XCTestCase {
     
     let divider = CostDivider(significantFractionDigits: 2)
+    
+    // MARK: balances
     
     func testThatBalancesAreEmptyWithoutAnyExpenses() {
         let balances = divider.balances(of: Array<MockExpenditure>())
@@ -58,6 +66,56 @@ class CostDividerTests: XCTestCase {
         
         let sumOfBalances = divider.balances(of: [expenditure]).values.map { Int($0*100) }.reduce(0, +)
         XCTAssertEqual(0, sumOfBalances)
+    }
+    
+    // MARK: settlement
+    
+    func testThatEmptyBalancesResultInNoTransfers() {
+        let transfers = divider.suggestedTransfersToSettle(balances: [:], type: MockTransfer.self)
+        XCTAssertTrue(transfers.isEmpty)
+    }
+    
+    func testThatSettlingSingleBalanceResultsInEmptyIfBalanceZero() {
+        let transfers = self.divider.suggestedTransfersToSettle(balances: [1:0], type: MockTransfer.self)
+        XCTAssertTrue(transfers.isEmpty)
+    }
+    
+    func testThatTryingToSettleSingleBalanceThrowsIfTotalsToZero() {
+        XCTAssertFatalError {
+            _ = self.divider.suggestedTransfersToSettle(balances: [1:1], type: MockTransfer.self)
+        }
+    }
+    
+    func testThatTryingToSettleThrowsIfTotalIsNotZero() {
+        XCTAssertFatalError {
+            _ = self.divider.suggestedTransfersToSettle(balances: [1:1, 2:0], type: MockTransfer.self)
+        }
+    }
+    
+    func testSettlingWithSinglePayment() {
+        let balances = [
+            1: 1.37,
+            2: -1.37,
+            ]
+        let transfers = self.divider.suggestedTransfersToSettle(balances: balances, type: MockTransfer.self)
+        let expected = [
+            MockTransfer(from: 2, to: 1, amount: 1.37),
+            ]
+        XCTAssertTrue(transfers.elementsEqual(expected))
+    }
+    
+    func testSettlingWithTwoPayments() {
+        let balances = [
+            1: 1.37,
+            2: -2.41,
+            3: 1.04,
+            ]
+        let transfers = self.divider.suggestedTransfersToSettle(balances: balances, type: MockTransfer.self)
+        let expected = [
+            MockTransfer(from: 2, to: 3, amount: 1.04),
+            MockTransfer(from: 2, to: 1, amount: 1.37),
+            ]
+        XCTAssertTrue(transfers.elementsEqual(expected))
     }
     
 }

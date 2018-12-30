@@ -15,23 +15,19 @@ public struct CostDivider {
         }
         
         let costLines = expenditures.lazy.flatMap { expenditure -> [(E.Entity, Double)] in
-            let payerLines = [(expenditure.payer, expenditure.amount)]
-            let individualAmount = -(expenditure.amount / Double(expenditure.beneficiaries.count))
-            let beneficiaryLines = expenditure.beneficiaries.map {
-                ($0, individualAmount)
+            let count = Double(expenditure.beneficiaries.count)
+            let individualAmount = self.rounder.round(expenditure.amount / count)
+            let roundedAmount = individualAmount * count
+            var lines = expenditure.beneficiaries.map {
+                ($0, -individualAmount)
             }
-            return payerLines + beneficiaryLines
+            lines.append((expenditure.payer, roundedAmount))
+            return lines
         }
         
-        let rawBalances = Dictionary(costLines, uniquingKeysWith: { $0 + $1 })
+        let balances = Dictionary(costLines, uniquingKeysWith: { $0 + $1 })
         
-        var carryOver = 0.0
-        let roundedBalances = rawBalances.mapValues { rawBalance -> Double in
-            let balance = rounder.round(rawBalance+carryOver)
-            carryOver = rawBalance - balance
-            return balance
-        }
-        return roundedBalances.filter { _, value in value != 0 }
+        return balances.filter { _, value in value != 0 }
     }
     
     public func suggestedTransfersToSettle<T>(balances: [T.Entity: Double], type: T.Type) -> [T] where T: Transfer {

@@ -68,6 +68,13 @@ class CostDividerTests: XCTestCase {
         XCTAssertEqual(0, sumOfBalances)
     }
     
+    func testThatTotalOfSignificantDigitsOfBalanceAreZeroWhenTricky() {
+        let expenditure = MockExpenditure(amount: 12.45, payer: 1, beneficiaries: [1,2,3,5])
+        
+        let sumOfBalances = divider.balances(of: [expenditure]).values.map { Int($0*100) }.reduce(0, +)
+        XCTAssertEqual(0, sumOfBalances)
+    }
+    
     // MARK: settlement
     
     func testThatEmptyBalancesResultInNoTransfers() {

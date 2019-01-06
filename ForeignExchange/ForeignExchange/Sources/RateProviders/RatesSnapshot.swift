@@ -2,16 +2,16 @@ import Foundation
 
 public struct RatesSnapshot: Equatable {
     
-    var date: Date
+    public var date: Date
     
-    var rates: [Currency: Double]
+    public var rates: [Currency: Double]
     
     public init(date: Date, rates: [Currency: Double]) {
         self.date = date
         self.rates = rates
     }
     
-    var supportedCurrencies: Set<Currency> {
+    public var supportedCurrencies: Set<Currency> {
         return Set(rates.keys)
     }
     

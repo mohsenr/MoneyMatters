@@ -15,6 +15,8 @@
 		89C6D72D21E2386F00759D0F /* OpenExchangeRateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C6D72C21E2386F00759D0F /* OpenExchangeRateProvider.swift */; };
 		89C6D73221E23B7700759D0F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C6D73121E23B7700759D0F /* RxCocoa.framework */; };
 		89C6D73421E23B7700759D0F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C6D73321E23B7700759D0F /* RxSwift.framework */; };
+		89C6D73621E23C6D00759D0F /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C6D73521E23C6D00759D0F /* Exchange.swift */; };
+		89C6D73921E23CA500759D0F /* RateProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C6D73821E23CA500759D0F /* RateProviding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		89C6D72C21E2386F00759D0F /* OpenExchangeRateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenExchangeRateProvider.swift; sourceTree = "<group>"; };
 		89C6D73121E23B7700759D0F /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C6D73321E23B7700759D0F /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89C6D73521E23C6D00759D0F /* Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange.swift; sourceTree = "<group>"; };
+		89C6D73821E23CA500759D0F /* RateProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateProviding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,7 @@
 			children = (
 				89C6D72A21E2381400759D0F /* Model */,
 				89C6D72B21E2383D00759D0F /* RateProviders */,
+				89C6D73721E23C8000759D0F /* Exchange */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 		89C6D72B21E2383D00759D0F /* RateProviders */ = {
 			isa = PBXGroup;
 			children = (
+				89C6D73821E23CA500759D0F /* RateProviding.swift */,
 				89C6D72C21E2386F00759D0F /* OpenExchangeRateProvider.swift */,
 			);
 			path = RateProviders;
@@ -238,6 +244,14 @@
 				89C6D73321E23B7700759D0F /* RxSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89C6D73721E23C8000759D0F /* Exchange */ = {
+			isa = PBXGroup;
+			children = (
+				89C6D73521E23C6D00759D0F /* Exchange.swift */,
+			);
+			path = Exchange;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,8 +363,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89C6D73921E23CA500759D0F /* RateProviding.swift in Sources */,
 				897937682083D12F0065AC82 /* Currency.swift in Sources */,
 				89C6D72D21E2386F00759D0F /* OpenExchangeRateProvider.swift in Sources */,
+				89C6D73621E23C6D00759D0F /* Exchange.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

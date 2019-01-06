@@ -13,6 +13,8 @@
 		8979377E2083D3230065AC82 /* CurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8979377D2083D3230065AC82 /* CurrencyTests.swift */; };
 		89BD7D5C2084DA4A007D38C8 /* SupportedCurrencies.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BD7D5B2084DA4A007D38C8 /* SupportedCurrencies.json */; };
 		89C6D72D21E2386F00759D0F /* OpenExchangeRateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C6D72C21E2386F00759D0F /* OpenExchangeRateProvider.swift */; };
+		89C6D73221E23B7700759D0F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C6D73121E23B7700759D0F /* RxCocoa.framework */; };
+		89C6D73421E23B7700759D0F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C6D73321E23B7700759D0F /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		8979377D2083D3230065AC82 /* CurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTests.swift; sourceTree = "<group>"; };
 		89BD7D5B2084DA4A007D38C8 /* SupportedCurrencies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SupportedCurrencies.json; sourceTree = "<group>"; };
 		89C6D72C21E2386F00759D0F /* OpenExchangeRateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenExchangeRateProvider.swift; sourceTree = "<group>"; };
+		89C6D73121E23B7700759D0F /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89C6D73321E23B7700759D0F /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89C6D73221E23B7700759D0F /* RxCocoa.framework in Frameworks */,
+				89C6D73421E23B7700759D0F /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +82,7 @@
 				8998360D2083D605009C647E /* Tools */,
 				8979376D2083D1620065AC82 /* Shared */,
 				8979374E2083D1090065AC82 /* Products */,
+				89C6D73021E23B7700759D0F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,6 +229,15 @@
 				89C6D72C21E2386F00759D0F /* OpenExchangeRateProvider.swift */,
 			);
 			path = RateProviders;
+			sourceTree = "<group>";
+		};
+		89C6D73021E23B7700759D0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89C6D73121E23B7700759D0F /* RxCocoa.framework */,
+				89C6D73321E23B7700759D0F /* RxSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

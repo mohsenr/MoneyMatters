@@ -19,6 +19,7 @@
 		89C6D73921E23CA500759D0F /* RateProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C6D73821E23CA500759D0F /* RateProviding.swift */; };
 		89C6D73B21E23EFE00759D0F /* ExchangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C6D73A21E23EFE00759D0F /* ExchangeTests.swift */; };
 		89C6D73D21E242B600759D0F /* OpenExchangeRateProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C6D73C21E242B600759D0F /* OpenExchangeRateProviderTests.swift */; };
+		89C6D73F21E2B09D00759D0F /* Support.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C6D73E21E2B09D00759D0F /* Support.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		89C6D73821E23CA500759D0F /* RateProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateProviding.swift; sourceTree = "<group>"; };
 		89C6D73A21E23EFE00759D0F /* ExchangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeTests.swift; sourceTree = "<group>"; };
 		89C6D73C21E242B600759D0F /* OpenExchangeRateProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenExchangeRateProviderTests.swift; sourceTree = "<group>"; };
+		89C6D73E21E2B09D00759D0F /* Support.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Support.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89C6D73F21E2B09D00759D0F /* Support.framework in Frameworks */,
 				89C6D73221E23B7700759D0F /* RxCocoa.framework in Frameworks */,
 				89C6D73421E23B7700759D0F /* RxSwift.framework in Frameworks */,
 			);
@@ -246,6 +249,7 @@
 		89C6D73021E23B7700759D0F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				89C6D73E21E2B09D00759D0F /* Support.framework */,
 				89C6D73121E23B7700759D0F /* RxCocoa.framework */,
 				89C6D73321E23B7700759D0F /* RxSwift.framework */,
 			);

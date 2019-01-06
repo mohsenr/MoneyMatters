@@ -12,6 +12,7 @@
 		897937682083D12F0065AC82 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897937672083D12F0065AC82 /* Currency.swift */; };
 		8979377E2083D3230065AC82 /* CurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8979377D2083D3230065AC82 /* CurrencyTests.swift */; };
 		89BD7D5C2084DA4A007D38C8 /* SupportedCurrencies.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BD7D5B2084DA4A007D38C8 /* SupportedCurrencies.json */; };
+		89C6D72D21E2386F00759D0F /* OpenExchangeRateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C6D72C21E2386F00759D0F /* OpenExchangeRateProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		8979377C2083D1800065AC82 /* ForeignExchangeTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ForeignExchangeTests.xcconfig; sourceTree = "<group>"; };
 		8979377D2083D3230065AC82 /* CurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTests.swift; sourceTree = "<group>"; };
 		89BD7D5B2084DA4A007D38C8 /* SupportedCurrencies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SupportedCurrencies.json; sourceTree = "<group>"; };
+		89C6D72C21E2386F00759D0F /* OpenExchangeRateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenExchangeRateProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				89C6D72A21E2381400759D0F /* Model */,
+				89C6D72B21E2383D00759D0F /* RateProviders */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -211,6 +214,14 @@
 				897937672083D12F0065AC82 /* Currency.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		89C6D72B21E2383D00759D0F /* RateProviders */ = {
+			isa = PBXGroup;
+			children = (
+				89C6D72C21E2386F00759D0F /* OpenExchangeRateProvider.swift */,
+			);
+			path = RateProviders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				897937682083D12F0065AC82 /* Currency.swift in Sources */,
+				89C6D72D21E2386F00759D0F /* OpenExchangeRateProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

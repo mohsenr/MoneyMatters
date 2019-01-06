@@ -18,4 +18,6 @@ extension Currency {
     
     static let usd = Currency(code: "USD")
     
+    static let chf = Currency(code: "CHF")
+    
 }

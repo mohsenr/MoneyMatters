@@ -19,6 +19,18 @@ struct OpenExchangeRateProvider: RateProviding {
         self.key = key
     }
     
+    var ratesURL: URL {
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = "openexchangerates.org"
+        components.path = "/api/latest.json"
+        components.queryItems = [
+            URLQueryItem(name: "app_id", value: key.value),
+            URLQueryItem(name: "symbols", value: supportedCurrencies.map { $0.code }.joined(separator: ",")),
+        ]
+        return components.url!
+    }
+    
 }
 
 extension OpenExchangeRateProvider {

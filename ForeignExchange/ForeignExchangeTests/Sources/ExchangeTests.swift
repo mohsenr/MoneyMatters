@@ -20,6 +20,10 @@ private class MockProvider: RateProviding {
     
     var supportedCurrencies: Set<Currency> = []
     
+    var ratesURL: URL {
+        fatalError("Not supported")
+    }
+    
 }
 
 private extension Currency {

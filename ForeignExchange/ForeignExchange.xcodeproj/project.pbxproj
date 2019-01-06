@@ -18,6 +18,7 @@
 		89C6D73621E23C6D00759D0F /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C6D73521E23C6D00759D0F /* Exchange.swift */; };
 		89C6D73921E23CA500759D0F /* RateProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C6D73821E23CA500759D0F /* RateProviding.swift */; };
 		89C6D73B21E23EFE00759D0F /* ExchangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C6D73A21E23EFE00759D0F /* ExchangeTests.swift */; };
+		89C6D73D21E242B600759D0F /* OpenExchangeRateProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C6D73C21E242B600759D0F /* OpenExchangeRateProviderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		89C6D73521E23C6D00759D0F /* Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange.swift; sourceTree = "<group>"; };
 		89C6D73821E23CA500759D0F /* RateProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateProviding.swift; sourceTree = "<group>"; };
 		89C6D73A21E23EFE00759D0F /* ExchangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeTests.swift; sourceTree = "<group>"; };
+		89C6D73C21E242B600759D0F /* OpenExchangeRateProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenExchangeRateProviderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				8979375B2083D1090065AC82 /* ForeignExchangeTests.swift */,
 				8979377D2083D3230065AC82 /* CurrencyTests.swift */,
 				89C6D73A21E23EFE00759D0F /* ExchangeTests.swift */,
+				89C6D73C21E242B600759D0F /* OpenExchangeRateProviderTests.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89C6D73B21E23EFE00759D0F /* ExchangeTests.swift in Sources */,
+				89C6D73D21E242B600759D0F /* OpenExchangeRateProviderTests.swift in Sources */,
 				8979377E2083D3230065AC82 /* CurrencyTests.swift in Sources */,
 				8979375C2083D1090065AC82 /* ForeignExchangeTests.swift in Sources */,
 			);

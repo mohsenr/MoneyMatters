@@ -3,7 +3,7 @@ import Foundation
 struct OpenExchangeRateProvider: RateProviding {
     
     struct APIKey {
-        var value: Str
+        var value: String
     }
     
     private var key: APIKey

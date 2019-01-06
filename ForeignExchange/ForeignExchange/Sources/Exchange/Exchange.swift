@@ -2,8 +2,14 @@ import Foundation
 
 public class Exchange {
     
-    public init(ratesFrom providing: RateProviding) {
-        
+    private let provider: RateProviding
+    
+    public var supportedCurrencies: Set<Currency> {
+        return provider.supportedCurrencies
+    }
+    
+    public init(withRatesFrom provider: RateProviding) {
+        self.provider = provider
     }
     
 }
@@ -17,7 +23,7 @@ public extension Exchange {
     public convenience init(provider: BuiltInRateProvider) {
         switch provider {
         case .openExchange(let key):
-            self.init(ratesFrom: OpenExchangeRateProvider(keyValue: key))
+            self.init(withRatesFrom: OpenExchangeRateProvider(keyValue: key))
         }
     }
     

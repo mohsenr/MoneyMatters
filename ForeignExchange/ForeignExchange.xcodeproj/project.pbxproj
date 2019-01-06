@@ -135,7 +135,7 @@
 		8979376C2083D1530065AC82 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				897937672083D12F0065AC82 /* Currency.swift */,
+				89C6D72A21E2381400759D0F /* Model */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -203,6 +203,14 @@
 				89BD7D5B2084DA4A007D38C8 /* SupportedCurrencies.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		89C6D72A21E2381400759D0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				897937672083D12F0065AC82 /* Currency.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

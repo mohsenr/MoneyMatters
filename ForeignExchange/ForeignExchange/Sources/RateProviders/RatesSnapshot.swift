@@ -19,3 +19,25 @@ public struct RatesSnapshot: Equatable {
     }
     
 }
+
+extension RatesSnapshot: Codable {
+    
+    private struct RawResponse: Codable {
+        var rates: [String: Double]
+    }
+
+    public init(from decoder: Decoder) throws {
+        let raw = try RawResponse(from: decoder)
+        self.init(
+            rates: Dictionary(uniqueKeysWithValues: raw.rates.map { (Currency(code: $0.key), $0.value) })
+        )
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        let raw = RawResponse(
+            rates: Dictionary(uniqueKeysWithValues: rates.map { ($0.key.code, $0.value) })
+        )
+        try raw.encode(to: encoder)
+    }
+    
+}

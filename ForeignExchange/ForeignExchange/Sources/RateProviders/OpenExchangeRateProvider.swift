@@ -32,8 +32,8 @@ struct OpenExchangeRateProvider: RateProviding {
     }
     
     func parseRateResponse(_ data: Data) throws -> RatesSnapshot {
-        let response = try JSONDecoder().decode(RateResponse.self, from: data)
-        return RatesSnapshot(rates: Dictionary(uniqueKeysWithValues: response.rates.map { (Currency(code: $0.key), $0.value) }))
+        // As it happens, our transport JSON is compatible with `RatesSnapshot` without adaptation.
+        return try JSONDecoder().decode(RatesSnapshot.self, from: data)
     }
     
 }
@@ -44,8 +44,4 @@ extension OpenExchangeRateProvider {
         self.init(key: APIKey(value: keyValue))
     }
     
-}
-
-private struct RateResponse: Decodable {
-    var rates: [String: Double]
 }

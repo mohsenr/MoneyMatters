@@ -33,7 +33,9 @@ struct OpenExchangeRateProvider: RateProviding {
     
     func parseRateResponse(_ data: Data) throws -> RatesSnapshot {
         // As it happens, our transport JSON is compatible with `RatesSnapshot` without adaptation.
-        return try JSONDecoder().decode(RatesSnapshot.self, from: data)
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .secondsSince1970
+        return try decoder.decode(RatesSnapshot.self, from: data)
     }
     
 }

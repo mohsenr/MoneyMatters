@@ -38,15 +38,20 @@ class OpenExchangeRateProviderTests: XCTestCase {
             }
             """.data(using: .utf8)!
         
+        
+        let date = Date(timeIntervalSince1970: 1546783204)
         let key = UUID().uuidString
         let provider = OpenExchangeRateProvider(keyValue: key)
         let rates = try provider.parseRateResponse(response)
-        XCTAssertEqual(rates, RatesSnapshot(rates: [
-            Currency(code: "CHF"): 0.986485,
-            Currency(code: "EUR"): 0.877535,
-            Currency(code: "GBP"): 0.785545,
-            Currency(code: "USD"): 1,
-            ]))
+        XCTAssertEqual(rates, RatesSnapshot(
+            date: date,
+            rates: [
+                Currency(code: "CHF"): 0.986485,
+                Currency(code: "EUR"): 0.877535,
+                Currency(code: "GBP"): 0.785545,
+                Currency(code: "USD"): 1,
+                ]
+        ))
     }
     
     func testParsingInvalidResponse() {

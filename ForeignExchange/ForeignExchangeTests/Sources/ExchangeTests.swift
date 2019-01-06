@@ -118,7 +118,7 @@ private struct MockProvider: RateProviding {
     }
     
     func parseRateResponse(_ data: Data) throws -> RatesSnapshot {
-        return RatesSnapshot(rates: [
+        return RatesSnapshot(date: Date(), rates: [
             Currency(code: "EUR"): 0.877535,
             Currency(code: "GBP"): 0.785545,
             Currency(code: "USD"): 1,

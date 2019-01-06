@@ -41,12 +41,12 @@ class OpenExchangeRateProviderTests: XCTestCase {
         let key = UUID().uuidString
         let provider = OpenExchangeRateProvider(keyValue: key)
         let rates = try provider.parseRateResponse(response)
-        XCTAssertEqual(rates, [
+        XCTAssertEqual(rates, RatesSnapshot(rates: [
             Currency(code: "CHF"): 0.986485,
             Currency(code: "EUR"): 0.877535,
             Currency(code: "GBP"): 0.785545,
             Currency(code: "USD"): 1,
-            ])
+            ]))
     }
     
     func testParsingInvalidResponse() {

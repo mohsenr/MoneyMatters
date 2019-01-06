@@ -31,9 +31,9 @@ struct OpenExchangeRateProvider: RateProviding {
         return components.url!
     }
     
-    func parseRateResponse(_ data: Data) throws -> [Currency: Double] {
+    func parseRateResponse(_ data: Data) throws -> RatesSnapshot {
         let response = try JSONDecoder().decode(RateResponse.self, from: data)
-        return Dictionary(uniqueKeysWithValues: response.rates.map { (Currency(code: $0.key), $0.value) })
+        return RatesSnapshot(rates: Dictionary(uniqueKeysWithValues: response.rates.map { (Currency(code: $0.key), $0.value) }))
     }
     
 }

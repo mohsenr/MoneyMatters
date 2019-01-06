@@ -4,23 +4,14 @@ import RxSwift
 
 class ExchangeTests: XCTestCase {
     
-    func testExchangeForwardsSupportedCurrenciesFromProvider() {
-        let provider = MockProvider(supportedCurrencies: Set((0..<Int.random(in: 2...10)).map { _ in
-            Currency.random()
-        }))
-        
-        let exchange = Exchange(withRatesFrom: provider) { _ in .empty() }
-        XCTAssertEqual(exchange.supportedCurrencies, provider.supportedCurrencies)
-    }
-    
     func testFetchingRatesRelativeToBase() {
         let provider = MockProvider(supportedCurrencies: [.gbp, .usd])
         
         let exchange = Exchange(withRatesFrom: provider) { _ in .just(Data()) }
         
         var fetchedRate: Double?
-        let disposable = exchange.snapshot.subscribe(onNext: { snapshot in
-            fetchedRate = snapshot.convert(unitOf: .usd, to: .gbp)
+        let disposable = exchange.rates.subscribe(onNext: { rate in
+            fetchedRate = rate.price(ofUnit: .usd, in: .gbp)
         })
         disposable.dispose()
         
@@ -33,8 +24,8 @@ class ExchangeTests: XCTestCase {
         let exchange = Exchange(withRatesFrom: provider) { _ in .just(Data()) }
         
         var fetchedRate = 0.0
-        let disposable = exchange.snapshot.subscribe(onNext: { snapshot in
-            fetchedRate = snapshot.convert(unitOf: .eur, to: .gbp)
+        let disposable = exchange.rates.subscribe(onNext: { rate in
+            fetchedRate = rate.price(ofUnit: .eur, in: .gbp)
         })
         disposable.dispose()
         
@@ -91,8 +82,8 @@ class ExchangeTests: XCTestCase {
         }
 
         let bag = DisposeBag()
-        exchange.snapshot.subscribe { _ in }.disposed(by: bag)
-        exchange.snapshot.subscribe { _ in }.disposed(by: bag)
+        exchange.rates.subscribe { _ in }.disposed(by: bag)
+        exchange.rates.subscribe { _ in }.disposed(by: bag)
         
         XCTAssertEqual(subscribeCount, 1)
     }
@@ -110,8 +101,8 @@ class ExchangeTests: XCTestCase {
         }
 
         let bag = DisposeBag()
-        exchange.snapshot.subscribe { _ in }.disposed(by: bag)
-        exchange.snapshot.subscribe { _ in }.disposed(by: bag)
+        exchange.rates.subscribe { _ in }.disposed(by: bag)
+        exchange.rates.subscribe { _ in }.disposed(by: bag)
         
         XCTAssertEqual(subscribeCount, 1)
     }
@@ -126,20 +117,12 @@ private struct MockProvider: RateProviding {
         return URL(string: "https://example.com")!
     }
     
-    func parseRateResponse(_ data: Data) throws -> [Currency: Double] {
-        return [
+    func parseRateResponse(_ data: Data) throws -> RatesSnapshot {
+        return RatesSnapshot(rates: [
             Currency(code: "EUR"): 0.877535,
             Currency(code: "GBP"): 0.785545,
             Currency(code: "USD"): 1,
-        ]
-    }
-    
-}
-
-private extension Currency {
-    
-    static func random() -> Currency {
-        return Currency(code: String(UUID().uuidString.prefix(3)))
+        ])
     }
     
 }

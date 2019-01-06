@@ -6,4 +6,6 @@ public protocol RateProviding {
     
     var ratesURL: URL { get }
     
+    func parseRateResponse(_ data: Data) throws -> [Currency: Double]
+    
 }

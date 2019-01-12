@@ -10,6 +10,18 @@ public struct Currency: Hashable {
     
 }
 
+extension Currency: Codable {
+    
+    public init(from decoder: Decoder) throws {
+        try self.init(code: String(from: decoder))
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        try code.encode(to: encoder)
+    }
+    
+}
+
 extension Currency {
     
     static let eur = Currency(code: "EUR")

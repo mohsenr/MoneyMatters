@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Support",
+        "repositoryURL": "https://github.com/zuhlke/Support.git",
+        "state": {
+          "branch": null,
+          "revision": "fe7358508fac1fc0a15371a6a2dd93aa56daf73e",
+          "version": "1.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

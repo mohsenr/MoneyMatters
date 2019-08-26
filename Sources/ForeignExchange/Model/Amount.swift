@@ -43,13 +43,9 @@ private extension Amount {
         sema.wait()
         defer { sema.signal() }
         
-        if let digits = significantDigits[currency] {
-            return digits
-        } else {
+        return significantDigits.get(currency) {
             formatter.currencyCode = currency.code
-            let digits = formatter.maximumFractionDigits
-            significantDigits[currency] = digits
-            return digits
+            return formatter.maximumFractionDigits
         }
     }
     

@@ -21,7 +21,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/zuhlke/Support.git", .upToNextMajor(from: "1.0.1")),
+        .package(url: "https://github.com/zuhlke/Support.git", .upToNextMajor(from: "1.1.0")),
     ],
     targets: [
         .target(
